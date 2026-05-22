@@ -20,23 +20,23 @@ int menu() {
     return x;
 }
 
-int add() {
+double add() {
     return firstNumber() + secondNumber();
 }
 
-int substract() {
+double substract() {
     return firstNumber() - secondNumber();
 }
 
-int multiply() {
+double multiply() {
     return firstNumber() * secondNumber();
 }
 
-int divide() {
+double divide() {
     return firstNumber() / secondNumber();
 }
 
-int power() {
+double power() {
     std::cout<<"Your number: ";
     int x;
     std::cin>> x;
@@ -49,6 +49,6 @@ int power() {
 }
 
 
-void result(int y) {
+void result(double y) {
     std::cout<<"\n= "<< y <<"\n\n\n";
 }

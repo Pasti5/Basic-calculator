@@ -28,6 +28,6 @@ target_link_libraries(BasicCalculator
         CalculatorIngredients
 )
 
-
+target_compile_options(BasicCalculator PRIVATE -Wsign-conversion -Werror -Wall -Weffc++ -O3)
 
 

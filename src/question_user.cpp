@@ -1,16 +1,16 @@
 #include <iostream>
 
-int firstNumber() {
+double firstNumber() {
     std::cout<<"First number: ";
-        int x {};
+        double x {};
     std::cin>>x;
 
     return x;
 }
 
-int secondNumber() {
+double secondNumber() {
     std::cout<<"Second number: ";
-        int y {};
+        double y {};
     std::cin>>y;
 
     return y;

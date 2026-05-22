@@ -3,12 +3,12 @@
 
 int menu();
 
-int add();
-int substract();
-int multiply();
-int divide();
-int power();
+double add();
+double substract();
+double multiply();
+double divide();
+double power();
 
-void result(int y);
+void result(double y);
 
 #endif // TOOLS_H_INCLUDED

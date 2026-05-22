@@ -1,7 +1,7 @@
 #ifndef QUESTION_USER_H_INCLUDED
 #define QUESTION_USER_H_INCLUDED
 
-int firstNumber();
-int secondNumber();
+double firstNumber();
+double secondNumber();
 
 #endif // QUESTION_USER_H_INCLUDED
