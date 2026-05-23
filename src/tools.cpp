@@ -4,19 +4,21 @@
 #include "question_user.h"
 
 int menu() {
-    std::cout<<"-----------------\n";
-    std::cout<<"1. Multiply\n";
-    std::cout<<"2. Divide\n";
-    std::cout<<"3. Add\n";
-    std::cout<<"4. Subtract\n";
-    std::cout<<"5. Raise to power\n";
-    std::cout<<"6. Extract root\n\n";
-    std::cout<<"7. Exit\n";
-    std::cout<<"-----------------\n\n";
+
+    std::cout<<"-------MENU------\n";
+    std::cout<<"1) Multiply\n";
+    std::cout<<"2) Divide\n";
+    std::cout<<"3) Add\n";
+    std::cout<<"4) Subtract\n";
+    std::cout<<"5) Raise to power\n";
+    std::cout<<"6) Extract root\n";
+    std::cout<<"7) EXIT\n\n";
 
     std::cout<<"Option(1-7): ";
     int x {};
     std::cin>>x;
+    std::cout<<"\n";
+
 
     return x;
 }
@@ -38,13 +40,14 @@ double divide() {
     double y {secondNumber()};
 
     while(y==0) {
-        std::cout<<"\nError: You can not divide by zero.\n";
+        std::cout<<"Error: You can not divide by zero.\n\n";
             double x {firstNumber()};
             double y {secondNumber()};
 
-        if(y!=0) break;
+        if(y!=0) 
+            return x/y;
     }
-
+    
     return x/y;
 }
 
@@ -74,5 +77,5 @@ double root() {
 
 
 void result(double y) {
-    std::cout<<"\n= "<< y <<"\n\n\n";
+    std::cout<<"= "<< y <<"\n\n";
 }
