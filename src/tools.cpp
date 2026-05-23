@@ -72,7 +72,21 @@ double root() {
     double y {};
     std::cin>> y;
 
-    return pow(x, pow(y, -1));
+        while(x<0) {
+            std::cout<<"Error: The number can not be negative.\n\n";
+
+                std::cout<<"Number: ";
+                double x {};
+                std::cin>> x;
+
+                std::cout<<"Root degree: ";
+                double y {};
+                std::cin>> y;
+
+            if(x>=0) 
+                return pow(x, 1/y);
+        }
+    return pow(x, 1/y);
 }
 
 
