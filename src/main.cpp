@@ -4,7 +4,7 @@
 
 int main()
 {
-    std::cout<<"Welcome to the basic calculator!\n";
+    std::cout<<"\nWelcome to the basic calculator!\n";
     while(true) {
         switch ( menu() ) {
 
@@ -24,6 +24,9 @@ int main()
             result( power() );
             break;
         case 6:
+            result( root() );
+            break;
+        case 7:
             exit(0);
 
         default:
