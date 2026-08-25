@@ -1,17 +1,11 @@
 #include <iostream>
+#include <string>
 
-double firstNumber() {
-    std::cout<<"First number: ";
-        double x {};
-    std::cin>>x;
 
-    return x;
-}
-
-double secondNumber() {
-    std::cout<<"Second number: ";
-        double y {};
-    std::cin>>y;
-
-    return y;
+double getNumberFor(std::string number_kind) 
+{
+        std::cout << number_kind << ": ";
+            double number;
+        std::cin >> number;
+        return number;
 }
