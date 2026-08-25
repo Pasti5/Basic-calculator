@@ -46,9 +46,8 @@ double divide(double dividend, double divisor)
         double new_divisor {getNumberFor("Divisor")};
 
         if(new_divisor != 0)
-        return new_dividend / new_divisor;
+            return new_dividend / new_divisor;
     }
-
     return dividend/divisor;
 }
 
@@ -59,16 +58,15 @@ double power(double base, double exponent)
 
 double root(double radicand, double index)
 {
-        while(radicand < 0) 
-        {
-            std::cout << "Error: Radicand can not be negative.\n\n";
-            double new_radicand {getNumberFor("Radicand")};
-            double new_index {getNumberFor("Index")};
+    while(radicand < 0) 
+    {
+        std::cout << "Error: Radicand can not be negative.\n\n";
+        double new_radicand {getNumberFor("Radicand")};
+        double new_index {getNumberFor("Index")};
 
-            if(new_radicand >= 0)
+        if(new_radicand >= 0)
             return pow(new_radicand, 1/new_index);
-        }
-
+    }
     return pow(radicand, 1/index);
 }
 
