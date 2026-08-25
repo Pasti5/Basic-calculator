@@ -3,88 +3,77 @@
 
 #include "question_user.h"
 
-int menu() {
+int menu() 
+{
+    std::cout << "-------MENU------\n";
+    std::cout << "1) Multiply\n";
+    std::cout << "2) Divide\n";
+    std::cout << "3) Add\n";
+    std::cout << "4) Subtract\n";
+    std::cout << "5) Raise to power\n";
+    std::cout << "6) Extract root\n";
+    std::cout << "7) EXIT\n\n";
 
-    std::cout<<"-------MENU------\n";
-    std::cout<<"1) Multiply\n";
-    std::cout<<"2) Divide\n";
-    std::cout<<"3) Add\n";
-    std::cout<<"4) Subtract\n";
-    std::cout<<"5) Raise to power\n";
-    std::cout<<"6) Extract root\n";
-    std::cout<<"7) EXIT\n\n";
+    std::cout << "Option(1-7): ";
+    int option {};
+    std::cin >> option;
+    std::cout << "\n";
 
-    std::cout<<"Option(1-7): ";
-    int x {};
-    std::cin>>x;
-    std::cout<<"\n";
-
-
-    return x;
+    return option;
 }
 
-double add() {
-    return firstNumber() + secondNumber();
+double add(double addend1, double addend2) 
+{
+    return addend1 + addend2;
 }
 
-double substract() {
-    return firstNumber() - secondNumber();
+double subtract(double minuend, double subtrahend) 
+{
+    return minuend - subtrahend;
 }
 
-double multiply() {
-    return firstNumber() * secondNumber();
+double multiply(double factor1, double factor2) 
+{
+    return factor1 * factor2;
 }
 
-double divide() {
-    double x {firstNumber()};
-    double y {secondNumber()};
+double divide(double dividend, double divisor) 
+{
+    while(divisor == 0) 
+    {
+        std::cout << "Error: You can not divide by zero.\n\n";
+        double new_dividend {getNumberFor("Dividend")};
+        double new_divisor {getNumberFor("Divisor")};
 
-    while(y==0) {
-        std::cout<<"Error: You can not divide by zero.\n\n";
-        double x {firstNumber()};
-        double y {secondNumber()};
-
-        if(y!=0)
-            return x/y;
+        if(new_divisor != 0)
+        return new_dividend / new_divisor;
     }
 
-    return x/y;
+    return dividend/divisor;
 }
 
-double power() {
-    std::cout<<"Base number: ";
-    double x {};
-    std::cin>> x;
-
-    std::cout<<"Exponent: ";
-    double y {};
-    std::cin>> y;
-
-    return pow(x, y);
+double power(double base, double exponent) 
+{
+    return pow(base, exponent);
 }
 
-double root() {
-        std::cout<<"Number: ";
-        double x {};
-        std::cin>> x;
+double root(double radicand, double index)
+{
+        while(radicand < 0) 
+        {
+            std::cout << "Error: Radicand can not be negative.\n\n";
+            double new_radicand {getNumberFor("Radicand")};
+            double new_index {getNumberFor("Index")};
 
-        while(x<0) {
-            std::cout<<"Error: The number can not be negative.\n\n";
-            std::cout<<"Number: ";
-            std::cin>>x;
-
-            if(x>=0)
-                break;
+            if(new_radicand >= 0)
+            return pow(new_radicand, 1/new_index);
         }
 
-        std::cout<<"Root degree: ";
-        double y {};
-        std::cin>> y;
-
-    return pow(x, 1/y);
+    return pow(radicand, 1/index);
 }
 
 
-void result(double y) {
-    std::cout<<"= "<< y <<"\n\n";
+void printResult(double result) 
+{
+    std::cout << "= " << result << "\n\n";
 }
