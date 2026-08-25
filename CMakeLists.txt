@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 3.23)
 
-project(BasicCalculator)
+project(Basic_Calculator VERSION 0.4 LANGUAGES CXX)
 
-add_executable(BasicCalculator)
+set(CMAKE_CXX_STANDARD 11)  
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(Basic_Calculator)
 add_library(CalculatorIngredients)
 
-target_sources(BasicCalculator 
+target_sources(Basic_Calculator 
     PRIVATE
         src/main.cpp
 )
@@ -23,11 +26,12 @@ target_sources(CalculatorIngredients
             include/question_user.h
 )
 
-target_link_libraries(BasicCalculator
+target_link_libraries(Basic_Calculator
     PRIVATE
         CalculatorIngredients
 )
 
-target_compile_options(BasicCalculator PRIVATE -Wsign-conversion -Werror -Wall -Weffc++ -O3)
+target_compile_options(Basic_Calculator PRIVATE -Wsign-conversion -Werror -Wall -Weffc++)
+
 
 
