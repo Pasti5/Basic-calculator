@@ -6,14 +6,14 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Basic_Calculator)
-add_library(CalculatorIngredients)
+add_library(Calculator_Ingredients)
 
 target_sources(Basic_Calculator 
     PRIVATE
         src/main.cpp
 )
 
-target_sources(CalculatorIngredients
+target_sources(Calculator_Ingredients
     PRIVATE
         src/tools.cpp
         src/question_user.cpp
@@ -28,7 +28,7 @@ target_sources(CalculatorIngredients
 
 target_link_libraries(Basic_Calculator
     PRIVATE
-        CalculatorIngredients
+        Calculator_Ingredients
 )
 
 target_compile_options(Basic_Calculator PRIVATE -Wsign-conversion -Werror -Wall -Weffc++)
