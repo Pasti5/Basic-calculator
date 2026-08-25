@@ -1,15 +1,15 @@
-#ifndef TOOLS_H_INCLUDED
-#define TOOLS_H_INCLUDED
+#ifndef TOOLS_H
+#define TOOLS_H
 
 int menu();
 
-double add();
-double substract();
-double multiply();
-double divide();
-double power();
-double root();
+double add      (double addend1, double addend2);
+double subtract (double minuend, double subtrahend);
+double multiply (double factor1, double factor2);
+double divide   (double dividend, double divisor);
+double power    (double base, double exponent);
+double root     (double radicand, double index);
 
-void result(double y);
+void printResult(double result);
 
-#endif // TOOLS_H_INCLUDED
+#endif // TOOLS_H

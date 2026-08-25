@@ -1,7 +1,6 @@
-#ifndef QUESTION_USER_H_INCLUDED
-#define QUESTION_USER_H_INCLUDED
+#ifndef QUESTION_USER_H
+#define QUESTION_USER_H
 
-double firstNumber();
-double secondNumber();
+double getNumberFor(std::string number_kind);
 
-#endif // QUESTION_USER_H_INCLUDED
+#endif // QUESTION_USER_H
