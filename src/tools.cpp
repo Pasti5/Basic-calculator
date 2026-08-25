@@ -39,13 +39,13 @@ double multiply(double factor1, double factor2)
 
 double divide(double dividend, double divisor) 
 {
-    while(divisor == 0) 
+    while(divisor == 0.0) 
     {
         std::cout << "Error: You can not divide by zero.\n\n";
         double new_dividend {getNumberFor("Dividend")};
         double new_divisor {getNumberFor("Divisor")};
 
-        if(new_divisor != 0)
+        if(new_divisor != 0.0)
             return new_dividend / new_divisor;
     }
     return dividend/divisor;
@@ -56,18 +56,31 @@ double power(double base, double exponent)
     return pow(base, exponent);
 }
 
+
+
+
+bool isInteger(double number)
+{
+    return number == std::floor(number);
+}
+bool isEven(double number)
+{
+    return std::fmod(number, 2.0) == 0;
+}
+
+
 double root(double radicand, double index)
 {
-    while(radicand < 0) 
+    while(radicand < 0.0 && (isInteger(index) == false || (isInteger(index) == true && isEven(index) == true) )) 
     {
-        std::cout << "Error: Radicand can not be negative.\n\n";
+        std::cout << "Error: Try a different radicand or index.\n\n";
         double new_radicand {getNumberFor("Radicand")};
         double new_index {getNumberFor("Index")};
 
-        if(new_radicand >= 0)
-            return pow(new_radicand, 1/new_index);
+        if(new_radicand >= 0.0)
+            return pow(new_radicand, 1.0/new_index);
     }
-    return pow(radicand, 1/index);
+    return pow(radicand, 1.0/index);
 }
 
 
