@@ -11,6 +11,11 @@ int main()
         {
         case 1:
             {
+            /**
+             *Arguments in e.g. multiply() are "asked" by the function in 
+             *undefined order so using AskUserFor() as arguments could 
+             *end with asking user about "Second factor" first.
+             */
             double first_number {AskUserFor("First factor")};
             double second_number {AskUserFor("Second factor")};
             printResult(multiply(first_number, second_number));
