@@ -64,8 +64,9 @@ double power(double base, double exponent)
 }
 
 
-
-
+/**
+ * These two functions are currently used only in the root() function.
+ */
 bool isInteger(double number)
 {
     return number == std::floor(number);
@@ -76,6 +77,13 @@ bool isEven(double number)
 }
 
 
+/**
+ * If the radicand is smaller than zero and:
+ * - the index isn't integer number
+ * - OR the index is integer number and even
+ * 
+ *  then the while loop argument will be "true".
+ */
 double root(double radicand, double index)
 {
     while(radicand < 0.0 && (isInteger(index) == false || (isInteger(index) == true && isEven(index) == true) )) 
