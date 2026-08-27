@@ -11,43 +11,43 @@ int main()
         {
         case 1:
             {
-            double first_number {getNumberFor("First factor")};
-            double second_number {getNumberFor("Second factor")};
+            double first_number {AskUserFor("First factor")};
+            double second_number {AskUserFor("Second factor")};
             printResult(multiply(first_number, second_number));
             }
             break;
         case 2:
             {
-            double first_number {getNumberFor("Dividend")};
-            double second_number {getNumberFor("Divisor")};
+            double first_number {AskUserFor("Dividend")};
+            double second_number {AskUserFor("Divisor")};
             printResult(divide(first_number, second_number));
             }
             break;
         case 3:
             {
-            double first_number {getNumberFor("First addend")};
-            double second_number {getNumberFor("Second addend")};
+            double first_number {AskUserFor("First addend")};
+            double second_number {AskUserFor("Second addend")};
             printResult(add(first_number, second_number));
             }
             break;
         case 4:
             {
-            double first_number {getNumberFor("Minuend")};
-            double second_number {getNumberFor("Subtrahend")};
+            double first_number {AskUserFor("Minuend")};
+            double second_number {AskUserFor("Subtrahend")};
             printResult(subtract(first_number, second_number));
             }
             break;
         case 5:
             {
-            double base {getNumberFor("Base")};
-            double exponent {getNumberFor("Exponent")};
+            double base {AskUserFor("Base")};
+            double exponent {AskUserFor("Exponent")};
             printResult(power(base, exponent));
             }
             break;
         case 6:
             {
-            double radicand {getNumberFor("Radicand")};
-            double index {getNumberFor("Index")};
+            double radicand {AskUserFor("Radicand")};
+            double index {AskUserFor("Index")};
             printResult(root(radicand, index));
             }
             break;
