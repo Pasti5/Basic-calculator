@@ -1,7 +1,9 @@
 #include <iostream>
 
+#include "menu.h"
 #include "tools.h"
 #include "question_user.h"
+#include "result.h"
 
 int main()
 {

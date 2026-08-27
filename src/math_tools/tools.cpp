@@ -9,25 +9,8 @@
 #include <cmath>
 
 #include "question_user.h"
+#include "booleans.h"
 
-int menu() 
-{
-    std::cout << "-------MENU------\n";
-    std::cout << "1) Multiply\n";
-    std::cout << "2) Divide\n";
-    std::cout << "3) Add\n";
-    std::cout << "4) Subtract\n";
-    std::cout << "5) Raise to power\n";
-    std::cout << "6) Extract root\n";
-    std::cout << "7) EXIT\n\n";
-
-    std::cout << "Option(1-7): ";
-    int option {};
-    std::cin >> option;
-    std::cout << "\n";
-
-    return option;
-}
 
 double add(double addend1, double addend2) 
 {
@@ -58,24 +41,11 @@ double divide(double dividend, double divisor)
     return dividend/divisor;
 }
 
+
 double power(double base, double exponent) 
 {
-    return pow(base, exponent);
+    return pow(base, 1/exponent);
 }
-
-
-/**
- * These two functions are currently used only in the root() function.
- */
-bool isInteger(double number)
-{
-    return number == std::floor(number);
-}
-bool isEven(double number)
-{
-    return std::fmod(number, 2.0) == 0;
-}
-
 
 /**
  * If the radicand is smaller than zero and:
@@ -98,8 +68,3 @@ double root(double radicand, double index)
     return pow(radicand, 1.0/index);
 }
 
-
-void printResult(double result) 
-{
-    std::cout << "= " << result << "\n\n";
-}
