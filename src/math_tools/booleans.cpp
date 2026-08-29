@@ -8,10 +8,10 @@ bool isInteger(double number)
 
 bool isEven(double number)
 {
-    return std::fmod(number, 2.0) == 0;
+    return std::fmod(number, 2.0) == 0.0;
 }
 
 bool isRootIllegal(double radicand, double index)
 {
-    return  radicand < 0.0 && (isInteger(index) == false || (isInteger(index) == true && isEven(index) == true));
+    return  radicand < 0.0 && (isInteger(index) == false || isEven(index) == true);
 }
