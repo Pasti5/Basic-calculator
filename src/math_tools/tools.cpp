@@ -44,7 +44,7 @@ double divide(double dividend, double divisor)
 
 double power(double base, double exponent) 
 {
-    return pow(base, 1/exponent);
+    return pow(base, exponent);
 }
 
 /**
