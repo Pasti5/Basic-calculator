@@ -1,10 +1,3 @@
-/*! \file tools.cpp
-    \brief A file that has most of the tools
-
-    Except the options for calculations, this file also has menu() and printResult().
-*/
-
-
 #include <iostream>
 #include <cmath>
 
