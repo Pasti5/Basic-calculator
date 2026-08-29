@@ -49,13 +49,13 @@ double power(double base, double exponent)
  */
 double root(double radicand, double index)
 {
-    while(radicand < 0.0 && (isInteger(index) == false || (isInteger(index) == true && isEven(index) == true) )) 
+    while(isRootIllegal(radicand, index) == true) 
     {
         std::cout << "Error: Try a different radicand or index.\n\n";
         double new_radicand {AskUserFor("Radicand")};
         double new_index {AskUserFor("Index")};
 
-        if(new_radicand >= 0.0)
+        if(isRootIllegal(new_radicand, new_index) == false)
             return pow(new_radicand, 1.0/new_index);
     }
     return pow(radicand, 1.0/index);
